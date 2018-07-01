@@ -39,7 +39,7 @@ namespace PubsSubFunctions.Models
             var byteData = image.ToByteArray(ImageFormat.Jpeg);
             using (var content = new ByteArrayContent(byteData))
             {
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
                 response = await client.PostAsync(uri, content);
             }
             var contentString = await response.Content.ReadAsStringAsync();
