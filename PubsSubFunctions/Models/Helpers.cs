@@ -2,7 +2,7 @@
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace PubsSubFunctions.Helpers
+namespace PubsSubFunctions.Models
 {
     public static class Helpers
     {
