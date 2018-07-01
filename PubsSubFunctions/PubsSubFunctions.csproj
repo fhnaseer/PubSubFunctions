@@ -120,6 +120,8 @@
     <Content Include="Global.asax" />
     <None Include="Resources\identification1.jpg" />
     <None Include="Resources\identification2.jpg" />
+    <None Include="Resources\PrintedText.jpg" />
+    <None Include="Resources\Handwritting.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

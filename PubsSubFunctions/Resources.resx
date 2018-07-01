@@ -124,4 +124,10 @@
   <data name="identification2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\identification2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PrintedText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\PrintedText.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Handwritting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Handwritting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

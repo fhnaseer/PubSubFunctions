@@ -16,7 +16,17 @@ namespace PubsSubFunctions.Helpers
 
         public static async Task<object> AnalyzeImage(Bitmap image)
         {
-            return await RequestService(Config.AnalyzImageApiUri, Config.ComputerVisionApiKey, image);
+            return await RequestService(Config.AnalyzeImageApiUri, Config.ComputerVisionApiKey, image);
+        }
+
+        public static async Task<object> DetectPrintedText(Image image)
+        {
+            return await RequestService(Config.OcrApiUri, Config.ComputerVisionApiKey, image);
+        }
+
+        public static async Task<object> DetectHandwritingText(Image image)
+        {
+            return await RequestService(Config.HandwrittenApiUri, Config.ComputerVisionApiKey, image);
         }
 
         private static async Task<object> RequestService(string apiUri, string apiKey, Image image)
