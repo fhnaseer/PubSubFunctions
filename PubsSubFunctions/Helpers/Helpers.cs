@@ -8,7 +8,7 @@ namespace PubsSubFunctions.Helpers
     {
         public static byte[] ToByteArray(this Image image, ImageFormat format)
         {
-            using (MemoryStream ms = new MemoryStream())
+            using (var ms = new MemoryStream())
             {
                 image.Save(ms, format);
                 return ms.ToArray();
