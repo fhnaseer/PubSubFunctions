@@ -12,22 +12,22 @@ namespace PubsSubFunctions.Controllers
             if (functionName.Equals("AnalyzeImage", StringComparison.CurrentCultureIgnoreCase))
             {
                 var image = Resources.identification1;
-                return await CognitiveServices.AnalyzeImage(image);
+                return await ImageServices.AnalyzeImage(image);
             }
             if (functionName.Equals("FaceDetect", StringComparison.CurrentCultureIgnoreCase))
             {
                 var image = Resources.identification1;
-                return await CognitiveServices.DetectFaces(image);
+                return await ImageServices.DetectFaces(image);
             }
             if (functionName.Equals("PrintedText", StringComparison.CurrentCultureIgnoreCase))
             {
                 var image = Resources.PrintedText;
-                return await CognitiveServices.DetectPrintedText(image);
+                return await ImageServices.DetectPrintedText(image);
             }
             if (functionName.Equals("HandwritingText", StringComparison.CurrentCultureIgnoreCase))
             {
                 var image = Resources.PrintedText;
-                return await CognitiveServices.DetectHandwritingText(image);
+                return await ImageServices.DetectHandwritingText(image);
             }
             return null;
         }

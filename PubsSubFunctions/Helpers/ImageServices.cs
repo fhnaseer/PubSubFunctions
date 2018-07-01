@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace PubsSubFunctions.Helpers
 {
-    public class CognitiveServices
+    public static class ImageServices
     {
         public static async Task<object> DetectFaces(Image image)
         {
