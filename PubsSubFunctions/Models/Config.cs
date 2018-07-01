@@ -16,5 +16,7 @@
         public const string TextAnalyticsApiKey = "2bc03d5e65624e37bc2e68e421b0e965";
         public const string TextAnalyticsApiUri = "https://westcentralus.api.cognitive.microsoft.com/text/analytics/v2.0/";
         public static string DetectLanguagesApiUri = TextAnalyticsApiUri + "languages";
+        public static string DetectKeyPhrasesApiUri = TextAnalyticsApiUri + "keyPhrases";
+        public static string DetectSentimentsApiUri = TextAnalyticsApiUri + "sentiment";
     }
 }

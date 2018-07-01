@@ -11,25 +11,25 @@ namespace PubsSubFunctions.Models
     {
         public static async Task<JObject> DetectFaces(Image image)
         {
-            return await RequestService(Config.FaceDetectApiUri, Config.FaceApiKey, image);
+            return await RequestService(Config.FaceApiKey, Config.FaceDetectApiUri, image);
         }
 
         public static async Task<JObject> AnalyzeImage(Bitmap image)
         {
-            return await RequestService(Config.AnalyzeImageApiUri, Config.ComputerVisionApiKey, image);
+            return await RequestService(Config.ComputerVisionApiKey, Config.AnalyzeImageApiUri, image);
         }
 
         public static async Task<JObject> DetectPrintedText(Image image)
         {
-            return await RequestService(Config.OcrApiUri, Config.ComputerVisionApiKey, image);
+            return await RequestService(Config.ComputerVisionApiKey, Config.OcrApiUri, image);
         }
 
         public static async Task<JObject> DetectHandwritingText(Image image)
         {
-            return await RequestService(Config.HandwrittenApiUri, Config.ComputerVisionApiKey, image);
+            return await RequestService(Config.ComputerVisionApiKey, Config.HandwrittenApiUri, image);
         }
 
-        private static async Task<JObject> RequestService(string apiUri, string apiKey, Image image)
+        private static async Task<JObject> RequestService(string apiKey, string apiUri, Image image)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
