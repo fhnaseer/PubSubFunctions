@@ -1,24 +1,23 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
-using Newtonsoft.Json.Linq;
 using PubsSubFunctions.Helpers;
 
 namespace PubsSubFunctions.Controllers
 {
-    public class FaceDetectController : ApiController
+    public class AnalyzeImageController : ApiController
     {
         // GET api/<controller>
         public async Task<object> Get()
         {
             var image = Resources.identification1;
-            var result = await CognitiveServices.DetectFaces(image);
+            var result = await CognitiveServices.AnalysisImage(image);
             return result;
         }
 
         // GET api/<controller>/5
-        public JObject Get(int id)
+        public string Get(int id)
         {
-            return JObject.FromObject("value");
+            return "value";
         }
 
         // POST api/<controller>
@@ -35,7 +34,5 @@ namespace PubsSubFunctions.Controllers
         public void Delete(int id)
         {
         }
-
-
     }
 }
